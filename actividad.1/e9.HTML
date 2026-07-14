@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 9 - Clínica Veterinaria</title>
+</head>
+<body>
+
+<h2>Edad de Mascotas</h2>
+
+<script>
+
+// Pedir datos
+let nombre = prompt("Ingrese el nombre de la mascota:");
+let tipo = prompt("Ingrese el tipo (perro o gato):").toLowerCase();
+let edad = parseInt(prompt("Ingrese la edad de la mascota:"));
+
+let edadHumana;
+
+// Calcular edad humana
+if(tipo === "perro"){
+
+    edadHumana =
+        edad > 2
+        ? (2 * 10.5) + ((edad - 2) * 4)
+        : edad * 10.5;
+
+} else if(tipo === "gato"){
+
+    edadHumana =
+        edad > 2
+        ? (2 * 12) + ((edad - 2) * 4)
+        : edad * 12;
+
+} else {
+
+    alert("Tipo de mascota no reconocido");
+
+}
+
+// Mostrar resultado
+if(tipo === "perro" || tipo === "gato"){
+
+    document.write("<h3>Información de la Mascota</h3>");
+    document.write("Nombre: " + nombre + "<br>");
+    document.write("Tipo: " + tipo + "<br>");
+    document.write("Edad mascota: " + edad + " años<br>");
+    document.write("Edad humana equivalente: " + edadHumana + " años");
+
+}
+
+</script>
+
+</body>
+</html>

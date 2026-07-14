@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 6 - Cambio Droguería</title>
+</head>
+<body>
+
+<h2>Cálculo de Cambio</h2>
+
+<script>
+
+// Pedir datos al usuario
+let totalCompra = parseFloat(prompt("Ingrese el valor total de la compra:"));
+let valorEntregado = parseFloat(prompt("Ingrese el valor entregado por el cliente:"));
+
+// Validar y calcular
+if (valorEntregado < totalCompra) {
+
+    let faltante = totalCompra - valorEntregado;
+    alert("Dinero insuficiente, faltan $" + faltante.toLocaleString("es-CO"));
+
+} else if (valorEntregado === totalCompra) {
+
+    alert("No hay cambio");
+
+} else {
+
+    let cambio = valorEntregado - totalCompra;
+
+    document.write("<h3>Resultado</h3>");
+    document.write("Valor de la compra: $" + totalCompra.toLocaleString("es-CO") + "<br>");
+    document.write("Valor entregado: $" + valorEntregado.toLocaleString("es-CO") + "<br>");
+    document.write("<strong>Cambio: $" + cambio.toLocaleString("es-CO") + "</strong>");
+
+}
+
+</script>
+
+</body>
+</html>

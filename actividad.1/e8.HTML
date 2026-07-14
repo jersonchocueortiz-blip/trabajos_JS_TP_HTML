@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 8 - Descuentos</title>
+</head>
+<body>
+
+<h2>Descuento Escolar</h2>
+
+<script>
+
+// Pedir datos
+let producto = prompt("Ingrese el nombre del producto:");
+let precioOriginal = parseFloat(prompt("Ingrese el precio original:"));
+let porcentaje = parseFloat(prompt("Ingrese el porcentaje de descuento:"));
+
+// Validar porcentaje
+if(porcentaje < 1 || porcentaje > 70){
+
+    alert("Porcentaje no válido, debe estar entre 1% y 70%");
+
+} else {
+
+    let descuento = precioOriginal * (porcentaje / 100);
+    let precioFinal = precioOriginal - descuento;
+
+    let mensaje =
+        porcentaje > 50
+        ? "¡Oferta especial!"
+        : "Precio de temporada";
+
+    document.write("<h3>Resultado</h3>");
+    document.write("Producto: " + producto + "<br>");
+    document.write("Precio original: $" + precioOriginal.toLocaleString("es-CO") + "<br>");
+    document.write("Descuento aplicado: $" + descuento.toLocaleString("es-CO") + "<br>");
+    document.write("Precio final: $" + precioFinal.toLocaleString("es-CO") + "<br>");
+    document.write("<strong>" + mensaje + "</strong>");
+
+}
+
+</script>
+
+</body>
+</html>
